@@ -1,31 +1,19 @@
+
 fn main(){
-    let mut name = String::from("Hadi");
-
-    // change data in stirng
-    name = "Hadiuzzaman".to_string();
-
-    // apend in string text
-    name.push_str(" Hadi");
-
-    // apand word
-    name.push('!');
-
-    // replace word
-    let new_name = name.replace("Hadi!", "Hadi");
-
-    println!("{}", name);
-    println!("{}", new_name);
-  
-
-    // print every word
-    let word = name.split_whitespace();
-    println!("{:?}", word);
-
-    for ch in name.split_whitespace(){
-        println!("{}", ch);
+    // define with value
+    let ar = [10, 20, 30, 40, 50];
+    // ar.push(100);  it's wrong in array here  fix array element you not push element
+    println!("{:?}", ar);
+    // define with all value 0  element 5
+    let ar2 = [0; 5];
+    for element in ar2 {
+        println!("{}", element);
     }
 
-    // count the sentence length
-    println!("Length in bytes: {}", name.len());
-    println!("Number of characters : {}", name.chars().count());
+    // define with type 
+    let mut ar3: [i32; 3] = [100, 200, 300];
+    ar3[2] = 55;
+    println!("{:?}", ar3);
+    println!("array length: {}", ar3.len());
+    
 }
